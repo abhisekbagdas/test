@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhisek Bagdas | Developer Portfolio</title>
+    <meta name="description"
+        content="Welcome to Abhisek Bagdas' official portfolio. Explore projects, skills, and get in touch." />
+    <meta name="keywords"
+        content="Abhisek, Abhisek Bagdas, abhisekbagdas, software developer, portfolio, web developer in Nepal" />
+    <meta name="author" content="Abhisek Bagdas" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Abhisek Bagdas - Portfolio" />
+    <meta property="og:description" content="Explore projects by Abhisek Bagdas, passionate developer and designer." />
+    <meta property="og:url" content="https://abhisekbagdas.com.np" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm <strong>[Your Name]</strong>, a passionate developer!</p>
+        <button id="scrollDown">See More</button>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a self-taught developer with a passion for building beautiful, functional websites and apps. <br>
+            Hi! I’m a computer science student exploring the world of tech, one project at a time. I enjoy <br>
+            building responsive websites and practical tools that solve everyday problems. Right now, I’m working <br>
+            with HTML, CSS, JavaScript, Java, and Python, and slowly diving into backend development and databases. <br>
+            I'm always experimenting, learning something new, and turning ideas into real, functional web apps.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Cool web tool with animated UI and offline features.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>JavaScript-based app with dynamic interactions and visual feedback.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <section id="comments">
+        <h2>Leave a Comment</h2>
+        <form id="commentForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="comment" placeholder="Your Comment" required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+        <div id="commentList"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

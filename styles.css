@@ -1,0 +1,212 @@
+/* Body & Global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #0a192f, #1f4068, #162c43, #0a192f);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  color: #f0f8ff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Glowing Background Dots */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 30%, #00faff 0.5px, transparent 1px),
+    radial-gradient(circle at 80% 50%, #ffffff 0.7px, transparent 1.2px),
+    radial-gradient(circle at 40% 70%, #80e9ff 0.3px, transparent 0.8px);
+  background-size: 200px 200px;
+  opacity: 0.4;
+  animation: sparkle 4s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Sparkles */
+.sparkle {
+  position: absolute;
+  background: cyan;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 2s ease-in-out infinite;
+  filter: blur(1px);
+  z-index: 0;
+}
+
+/* Navigation Bar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  margin: 0;
+  gap: 30px;
+}
+
+header nav ul li a {
+  color: #00faff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Home */
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Project & Comment Cards */
+.project,
+.comment {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: left;
+  color: #e1f7ff;
+}
+
+/* Forms */
+form input,
+form textarea {
+  width: 80%;
+  padding: 12px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 8px;
+  background: #1e3a5f;
+  color: white;
+  font-size: 1em;
+  outline: none;
+}
+
+form button {
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #00faff, #2193b0);
+  border: none;
+  border-radius: 30px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00faff;
+}
+
+/* Comment Container */
+#commentList {
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes sparkle {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.2; }
+  100% { opacity: 0.4; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 0.9; transform: scale(1.2); }
+}
+
+
+/* Buttons */
+#scrollDown {
+  background: transparent;
+  border: 2px solid #00faff;
+  color: #00faff;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+#scrollDown:hover {
+  background-color: #00faff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+
+/* Theme Variables */
+:root.theme-1 {
+  --bg-main: linear-gradient(-45deg, #0a192f, #1f4068, #162c43, #0a192f);
+  --text: #f0f8ff;
+  --accent: #00faff;
+  --card: rgba(255, 255, 255, 0.06);
+}
+:root.theme-2 {
+  --bg-main: #fdfdfd;
+  --text: #111;
+  --accent: #0077cc;
+  --card: #fff;
+}
+:root.theme-3 {
+  --bg-main: linear-gradient(-45deg, #064e3b, #065f46, #0f766e, #064e3b);
+  --text: #e0fff7;
+  --accent: #34d399;
+  --card: rgba(0, 255, 170, 0.05);
+}
+:root.theme-4 {
+  --bg-main: linear-gradient(-45deg, #ff6b6b, #ff9a8b, #ffd166, #ff6b6b);
+  --text: #fff0e6;
+  --accent: #ffc300;
+  --card: rgba(255, 255, 255, 0.08);
+}
+:root.theme-5 {
+  --bg-main: linear-gradient(-45deg, #0077be, #00aaff, #005f99, #0077be);
+  --text: #e6f7ff;
+  --accent: #00e0ff;
+  --card: rgba(0, 255, 255, 0.07);
+}
